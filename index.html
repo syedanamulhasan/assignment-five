@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="mx-20 my-10">
+<body class="mx-24 my-10">
     <header>
         <div class="navbar bg-base-100">
             <div class="navbar-start">
@@ -56,7 +56,7 @@
                     <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with P Paribahan</h1>
                     <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The
                         integrated testing features allow for a streamlined</p>
-                    <button class="btn btn-primary">Buy Tickets</button>
+                    <a href="#greenline-section"><button class="btn btn-primary">Buy Tickets</button></a>
                 </div>
             </div>
         </div>
@@ -92,41 +92,24 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="card w-1/2 image-full">
-                    <figure><img src="images/coupn 1.png" alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card w-1/2 image-full">
-                    <figure><img src="images/coupn 2.png" alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
-                        </div>
-                    </div>
-                </div> -->
+
             </div>
             <div class="text-center">
                 <button class="btn btn-outline btn-success">See all offer<img src="images/bus-icon.png" alt=""></button>
             </div>
         </div>
-        <section>
+        <!-- greenline section -->
+        <section id="greenline-section">
             <div>
                 <p class="text-center text-4xl font-bold">P.H Paribahan</p>
-                <p class="text-center my-8">Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing
+                <p class="text-center my-8">Yes, you can run unit tests and view the results directly within the app.
+                    The integrated <br> testing
                     features allow for a streamlined .</p>
             </div>
             <!-- Greenline poribohon -->
             <div class="w-full bg-gray-200 rounded-lg">
                 <div class="w-full flex justify-between items-center">
-                    <div class="w-4/5">
+                    <div class="w-3/4">
                         <div class="flex w-full justify-between items-center mx-10 pt-4">
                             <div class="flex gap-3 items-center">
                                 <div>
@@ -162,9 +145,9 @@
                                 </div>
                                 <!-- route button -->
                                 <div class="my-8">
-                                    <button class="btn btn-neutral text-2xl">Boarding Point - Laxmipur</button>
-                                    <button class="btn btn-neutral text-2xl ml-5">Dropping Point - Bogura</button>
-                                    <button class="btn btn-neutral text-2xl ml-5">Est. Time - 11 Hour</button>
+                                    <button class="btn btn-neutral text-xl">Boarding Point - Laxmipur</button>
+                                    <button class="btn btn-neutral text-xl ml-5">Dropping Point - Bogura</button>
+                                    <button class="btn btn-neutral text-xl ml-5">Est. Time - 11 Hour</button>
                                 </div>
                             </div>
                         </div>
@@ -177,10 +160,105 @@
                 </div>
             </div>
         </section>
+        <section class="my-10 flex gap-10">
+            <!-- seat plan -->
+            <div class="w-3/5">
+                <p class="my-4">Select Your Seat</p>
+                <hr class="border-2 border-dashed">
+                <div class="flex justify-between my-4">
+                    <div class="flex gap-2">
+                        <img src="images/seat-gray.png" alt="">
+                        <p>available</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <img src="images/seat-green-filled.png" alt="">
+                        <p>selected</p>
+                    </div>
+                </div>
+                <hr class="border-2 border-dashed">
+                <div class="flex justify-end my-4">
+                    <button class="btn btn-neutral bg-gray-400"><img src="images/steering-wheel.png" alt=""></button>
+                </div>
+                <div>
+                    <div class="flex justify-between my-8">
+                        <div class="flex gap-8 items-center">
+                            <p>A</p>
+                            <button class="btn btn-active btn-ghost px-10">A1</button>
+                            <button class="btn btn-active btn-ghost px-10">A2</button>
+                        </div>
+                        <div class="flex gap-8 items-center">
+                            <button class="btn btn-active btn-ghost px-10">A3</button>
+                            <button class="btn btn-active btn-ghost px-10">A4</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between my-8">
+                        <div class="flex gap-8 items-center">
+                            <p>B</p>
+                            <button class="btn btn-active btn-ghost px-10">B1</button>
+                            <button class="btn btn-active btn-ghost px-10">B2</button>
+                        </div>
+                        <div class="flex gap-8 items-center">
+                            <button class="btn btn-active btn-ghost px-10">B3</button>
+                            <button class="btn btn-active btn-ghost px-10">B4</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="flex gap-8 items-center">
+                            <p>A</p>
+                            <button class="btn btn-active btn-ghost px-10">C1</button>
+                            <button class="btn btn-active btn-ghost px-10">C2</button>
+                        </div>
+                        <div class="flex gap-8 items-center">
+                            <button class="btn btn-active btn-ghost px-10">C3</button>
+                            <button class="btn btn-active btn-ghost px-10">C4</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- booking confirmation -->
+            <div class="w-2/5">
+                <div>
+                    <p class="text-2xl font-bold my-3">Select Your Seat</p>
+                    <hr class="border-2 border-dashed">
+                </div>
+                <div class="w-full bg-gray-200 rounded-lg mt-8 px-4">
+                    <div class="flex justify-between p-4 border-b-2 border-dashed border-black">
+                        <p>seat</p>
+                        <p>class</p>
+                        <p>prize</p>
+                    </div>
+                    <div class="flex justify-between p-2 border-t-2 border-black my-4">
+                        <P>Total price</P>
+                        <p>BDT <span>0</span></p>
+                    </div>
+                    <div>
+                        <input class="rounded-lg px-8 py-4" type="text"placeholder="Have any coupon?">
+                        <input class="" type="button" value="Apply">
+                    </div>
+                    <div class="flex justify-between p-2 my-4">
+                        <P>Grand Total</P>
+                        <p>BDT <span>0</span></p>
+                    </div>
+                </div>
+                <div>
+                    <label for="">Passenger Name: <br>
+                        <input type="text"placeholder="Enter your name">
+                    </label> <br>
+                    <label for="">Phone:<br>
+                        <input type="text"placeholder="Enter your name">
+                    </label><br>
+                    <label for="">Email: <br>
+                        <input type="text"placeholder="Enter your name">
+                    </label><br>
+                    <button class="btn btn-active btn-accent">Next</button>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
 
     </footer>
+    <script src="ticket.js"></script>
 </body>
 
 </html>
