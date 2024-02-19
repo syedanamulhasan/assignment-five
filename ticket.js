@@ -1,23 +1,5 @@
 const allBtn = document.getElementsByClassName('btn-ghost');
 
-// const btn = document.getElementById('btn');
-
-// btn.addEventListener('click', function onClick() {
-//   btn.style.backgroundColor = 'salmon';
-//   btn.style.color = 'white';
-// });
-// document.getElementsByClassName('btn-ghost').onmouseover = function() {
-//     this.style.color = 'red';
-//   };
-// const btnIndex= allBtn[index];
-
-// for(let index=0; index<allBtn.length;index++){
-//     const button= allBtn[index];
-//     // console.log(element);
-//     button.addEventListener('click',function(){
-//         console.log('clicked');
-//     })
-// }
 let tickets=2200;
 let seats = 12;
 let count = 0;
@@ -37,7 +19,7 @@ for (const btn of allBtn) {
         const p2 = document.createElement('p');
 
         //button background and click function
-        e.target.style.backgroundColor = 'lime';
+        e.target.style.backgroundColor = '#1DD100';
         e.target.setAttribute("disabled", false);
 
         p2.innerText = 550;
@@ -61,7 +43,7 @@ for (const btn of allBtn) {
             return;
         }
         // totalPrice('total-price',parseInt(p2.innerText))
-        // grandTotalCost('grand-total'parseInt(p2.innerText))
+        
         setInnerText('grand-total', sum2);
         setInnerText('total-price', sum);
         setInnerText("total-seats", seats);
@@ -69,13 +51,6 @@ for (const btn of allBtn) {
         
     })
 }
-
-// function totalPrice(id,p2.innerText){
-//     const totalPrice= document.getElementById('total-price').innerText;
-//     const convertedTotalPrice= parseInt(totalPrice);
-//     const sum = convertedTotalPrice + parseInt (p2.innerText);
-//     setInnerText(id, sum);
-// }
 
 //total price,grand total function
 function setInnerText(id, value) {
@@ -94,15 +69,14 @@ btn.addEventListener('click', function () {
             const discountElement = document.getElementById('grand-total');
             const discountAmount = tickets * 0.85
             discountElement.innerText = discountAmount.toFixed(2)
-        } else {
+        }else if(couponCode === 'Couple 20') {
+            const discountAmount = tickets * 0.80
+            discountElement.innerText = discountAmount.toFixed(2)
+        }
+        
+        else {
             alert('Invalid coupon')
     
         }
     }
 })
-
-// function grandTotalCost(){
-//     const totalPrice= document.getElementById('total-price').innerText
-//     const convertedTotalPrice= parseInt(totalPrice);
-//     setInnerText("grand-total",convertedTotalPrice);
-// }
