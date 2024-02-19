@@ -14,28 +14,8 @@
     <header>
         <div class="navbar bg-base-100">
             <div class="navbar-start">
-                <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h8m-8 6h16" />
-                        </svg>
-                    </div>
-                    <ul tabindex="0"
-                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <a>Parent</a>
-                            <ul class="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
-                    </ul>
-                </div>
-                <a class="btn btn-ghost text-xl">daisyUI</a>
+                
+                <a class="font-bold text-2xl">A-Ticket</a>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1">
@@ -54,17 +34,16 @@
             <div></div>
             <div class="hero-content text-center text-neutral-content">
                 <div class="max-w-md">
-                    <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with P Paribahan</h1>
-                    <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The
-                        integrated testing features allow for a streamlined</p>
-                    <a href="#greenline-section"><button class="btn btn-primary">Buy Tickets</button></a>
+                    <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with A Paribahan</h1>
+                    <p class="mb-5">Our website and app make it easy to plan your journey, find the cheapest bus fares, and purchase your bus tickets securely</p>
+                    <a href="#greenline-section"><button class="btn btn-active btn-accent">Buy Tickets</button></a>
                 </div>
             </div>
         </div>
     </header>
     <main>
         <div class="my-24">
-            <p class="text-center text-4xl">Best offers for you</p>
+            <p class="text-center font-bold text-4xl">Best offers for you</p>
 
             <div class="flex gap-10 my-12">
                 <div class="w-1/2 h-56 bg-yellow-500 rounded-2xl">
@@ -122,7 +101,7 @@
                                 </div>
                             </div>
                             <div>
-                                <button class="btn btn-outline btn-success"><img src="images/seat-green.png" alt=""><span id="total-seats">40</span>
+                                <button class="btn btn-outline btn-success"><img src="images/seat-green.png" alt=""><span id="total-seats">12</span>
                                     Seats
                                     left</button>
                             </div>
@@ -235,16 +214,20 @@
                         <P>Total price</P>
                         <p>BDT <span id="total-price">0</span></p>
                     </div>
-                    <div>
-                        <input class="rounded-lg px-8 py-4" type="text"placeholder="Have any coupon?">
-                        <input class="" type="button" value="Apply">
+                    <div class="join">
+                        <input id="input-field" class="input input-bordered join-item w-50"placeholder="Have any coupon?">
+                        <button id="apply-btn" class="btn join-item rounded-md bg-lime-600">Apply</button>
                     </div>
-                    <div class="flex justify-between p-2 my-4">
+                    <!-- <div class="flex justify-between p-2">
+                        <P>Discount</P>
+                        <p>BDT<span id="discount-price"></span></p>
+                    </div> -->
+                    <div class="flex justify-between p-2">
                         <P>Grand Total</P>
                         <p>BDT <span id="grand-total">0</span></p>
                     </div>
                 </div>
-                <div>
+                <!-- <div>
                     <label for="">Passenger Name: <br>
                         <input type="text"placeholder="Enter your name">
                     </label> <br>
@@ -255,7 +238,7 @@
                         <input type="text"placeholder="Enter your name">
                     </label><br>
                     <button class="btn btn-active btn-accent">Next</button>
-                </div>
+                </div> -->
             </div>
         </section>
     </main>
