@@ -15,15 +15,35 @@ for (const btn of allBtn){
         const p=document.createElement('p');
         p.innerText= 'Economy';
         const p2=document.createElement('p');
+
         p2.innerText=550;
         li.appendChild(p1);
         li.appendChild(p);
         li.appendChild(p2);
         ticketReceipt.appendChild(li);
+
+        const totalPrice= document.getElementById('total-price').innerText
+        const convertedTotalPrice= parseInt(totalPrice);
+        const sum = convertedTotalPrice + parseInt (p2.innerText);
+
+        const grandTotal= document.getElementById('grand-total').innerText
+        const convertedGrandTotal=parseInt(grandTotal);
+        const sum2 = convertedGrandTotal + parseInt (p2.innerText);
+
+        setInnerText('grand-total', sum2);
+        setInnerText('total-price', sum);
         setInnerText("total-seats", seats);
         setInnerText("booked-tickets", count);
     })
 }
+
+// function totalPrice(id,p2.innerText){
+//     const totalPrice= document.getElementById('total-price').innerText;
+//     const convertedTotalPrice= parseInt(totalPrice);
+//     const sum = convertedTotalPrice + parseInt (p2.innerText);
+//     setInnerText(id, sum);
+// }
+
 function setInnerText(id,value){
     document.getElementById(id).innerText = value;
 }
