@@ -4,14 +4,23 @@ const allBtn = document.getElementsByClassName("btn-ghost");
 for (const btn of allBtn) {
     btn.addEventListener('click', function (event) {
         const seatName= event.target.parentNode.childNodes[0].innerText;
+        
         console.log(seatName);
+        
+        const maxFour= getConvertedValue("booked-tickets")
+        if(maxFour + 1 > 4){
+            alert("you can not book more than 4 tickets");
+            return   
+        }
+        event.target.setAttribute("disabled",false);
+        event.target.style.backgroundColor="#1DD100";
         chair = chair-1;
         count = count+1;
         // const colTwoButtons=event.target.parentNode.childNodes[5].innerText;
 
         const ticketReceipt = document.getElementById('ticket-receipt');
 
-        const seatsLeft= getConvertedValue("total-seats")
+        
 
         setInnerText("total-seats",chair);
         setInnerText( "booked-tickets",count)
