@@ -1,5 +1,6 @@
 let chair = 12;
 let count= 0;
+
 const allBtn = document.getElementsByClassName("btn-ghost");
 for (const btn of allBtn) {
     btn.addEventListener('click', function (event) {
@@ -16,7 +17,7 @@ for (const btn of allBtn) {
         event.target.style.backgroundColor="#1DD100";
         chair = chair-1;
         count = count+1;
-        // const colTwoButtons=event.target.parentNode.childNodes[5].innerText;
+       
 
         const ticketReceipt = document.getElementById('ticket-receipt');
 
@@ -45,7 +46,7 @@ for (const btn of allBtn) {
     })
 }
 
-// coupon code part
+// coupon code start
 
 function updateGrandTotal(status){
     const totalPrice = getConvertedValue("total-price");
@@ -69,6 +70,7 @@ function updateGrandTotal(status){
     }
     
 }
+// coupon code end
 
 function setInnerText(id,value){
     document.getElementById(id).innerText = value;
@@ -87,11 +89,3 @@ function getConvertedValue(id) {
 }
 
 
-function checkParameter(status){
-    console.log(status);
-}
-checkParameter("test") 
-// const seatNumber = getConvertedValue('total-seats');
-// console.log(seatNumber);
-// const bookedTickets = getConvertedValue('booked-tickets');
-// console.log(bookedTickets);
