@@ -216,20 +216,23 @@
                     <div id="ticket-receipt">
 
                     </div>
-                    <div class="flex justify-between p-2 border-t-2 border-black my-4">
+                    <div class="flex justify-between p-2 border-t-2 border-black my-2">
                         <P>Total price</P>
                         <p>BDT <span id="total-price">0</span></p>
                     </div>
-                    <div id="coupon" class="join">
-                        <input id="coupon-code" class="input input-bordered join-item w-50"
+                    <!-- <div id="coupon" class="join">
+                        <input id="coupon-code" class="input input-bordered join-item w-"
                             placeholder="Have any coupon?">
                         <button onclick="updateGrandTotal('apply-btn')" id="apply-btn"
                             class="btn join-item rounded-md bg-lime-600">Apply</button>
-                    </div>
-                    <!-- <div class="flex justify-between p-2">
-                        <P>Discount</P>
-                        <p>BDT<span id="discount-price"></span></p>
                     </div> -->
+                    <div id="coupon">
+                        <label class="input input-bordered flex items-center gap-2">
+                            <input id="coupon-code" type="text" class="grow" placeholder="Have any coupon?" />
+                            <button onclick="updateGrandTotal('apply-btn')" id="apply-btn"
+                            class="p-2 m-4 rounded-lg bg-[#1DD100] text-white font-bold">Optional</button>
+                        </label>
+                    </div>
                     <div class="flex justify-between p-2">
                         <P>Grand Total</P>
                         <p>BDT <span id="grand-total">0</span></p>
@@ -240,23 +243,24 @@
                 <!-- Open the modal using ID.showModal() method -->
                 <div class="my-4 w-full">
                     <button class="btn w-full bg-[#1DD100]" onclick="my_modal_5.showModal()">Next</button>
-                <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-                    <div class="modal-box text-center">
-                        <img class="mx-auto" src="images/success.png" alt="">
-                        <h2 class="mx-auto text-[#27AE60] my-2">SUCCESS</h2>
-                        <h3 class="font-bold text-lg my-2">Thank you for Booking Our Bus Seats. 
-                            We are working hard to find the best service and deals for you. 
+                    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                        <div class="modal-box text-center">
+                            <img class="mx-auto" src="images/success.png" alt="">
+                            <h2 class="mx-auto text-[#27AE60] my-2">SUCCESS</h2>
+                            <h3 class="font-bold text-lg my-2">Thank you for Booking Our Bus Seats.
+                                We are working hard to find the best service and deals for you.
                             </h3>
-                        <p class="">Shortly you will find a confirmation in your email</p>
-                        <div class="modal-action">
-                            <form class="mx-auto" method="dialog">
-                                <!-- if there is a button in form, it will close the modal -->
-                                <button class="btn rounded-3xl bg-[#27AE60] text-white">Continue</button>
-                            </form>
+                            <p class="">Shortly you will find a confirmation in your email</p>
+                            <div class="modal-action">
+                                <form class="mx-auto" method="dialog">
+                                    <!-- if there is a button in form, it will close the modal -->
+                                    <button class="btn rounded-3xl bg-[#27AE60] text-white">Continue</button>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-                </dialog>
+                    </dialog>
                 </div>
+                <!-- modal end -->
         </section>
     </main>
     <footer>
