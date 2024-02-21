@@ -1,13 +1,21 @@
-
+let chair = 12;
+let count= 0;
 const allBtn = document.getElementsByClassName("btn-ghost");
 for (const btn of allBtn) {
     btn.addEventListener('click', function (event) {
         const seatName= event.target.parentNode.childNodes[0].innerText;
         console.log(seatName);
-
+        chair = chair-1;
+        count = count+1;
         // const colTwoButtons=event.target.parentNode.childNodes[5].innerText;
 
         const ticketReceipt = document.getElementById('ticket-receipt');
+
+        const seatsLeft= getConvertedValue("total-seats")
+
+        setInnerText("total-seats",chair);
+        setInnerText( "booked-tickets",count)
+
         const newDiv = document.createElement("div");
         newDiv.classList.add("flex", "justify-between")
         const p1 = document.createElement("p");
@@ -28,6 +36,7 @@ for (const btn of allBtn) {
     })
 }
 
+// coupon code part
 
 function updateGrandTotal(status){
     const totalPrice = getConvertedValue("total-price");
@@ -52,7 +61,9 @@ function updateGrandTotal(status){
     
 }
 
-
+function setInnerText(id,value){
+    document.getElementById(id).innerText = value;
+}
 function updateTotalCost(value){
     const totalPrice = getConvertedValue("total-price");
     const sum = totalPrice + parseInt(value);
