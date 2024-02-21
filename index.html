@@ -162,40 +162,42 @@
                 <div class="flex justify-end my-4">
                     <button class="btn btn-neutral bg-gray-400"><img src="images/steering-wheel.png" alt=""></button>
                 </div>
+                <!-- allBTN -->
                 <div>
                     <div class="flex justify-between my-8">
                         <div class="flex gap-8 items-center">
                             <p>A</p>
-                            <button class="btn btn-active btn-ghost px-10">A1</button>
-                            <button class="btn btn-active btn-ghost px-10">A2</button>
+                            <div><button class="btn btn-active btn-ghost px-10">A1</button></div>
+                            <div><button class="btn btn-active btn-ghost px-10">A2</button></div>
                         </div>
                         <div class="flex gap-8 items-center">
-                            <button class="btn btn-active btn-ghost px-10">A3</button>
-                            <button class="btn btn-active btn-ghost px-10">A4</button>
+                            <div><button class="btn btn-active btn-ghost px-10">A3</button></div>
+                            <div><button class="btn btn-active btn-ghost px-10">A4</button></div>
                         </div>
                     </div>
                     <div class="flex justify-between my-8">
                         <div class="flex gap-8 items-center">
                             <p>B</p>
-                            <button class="btn btn-active btn-ghost px-10">B1</button>
-                            <button class="btn btn-active btn-ghost px-10">B2</button>
+                            <div><button class="btn btn-active btn-ghost px-10">B1</button></div>
+                            <div><button class="btn btn-active btn-ghost px-10">B2</button></div>
                         </div>
                         <div class="flex gap-8 items-center">
-                            <button class="btn btn-active btn-ghost px-10">B3</button>
-                            <button class="btn btn-active btn-ghost px-10">B4</button>
+                            <div><button class="btn btn-active btn-ghost px-10">B3</button></div>
+                            <div><button class="btn btn-active btn-ghost px-10">B4</button></div>
                         </div>
                     </div>
-                    <div class="flex justify-between">
+                    <div class="flex justify-between my-8">
                         <div class="flex gap-8 items-center">
-                            <p>A</p>
-                            <button class="btn btn-active btn-ghost px-10">C1</button>
-                            <button class="btn btn-active btn-ghost px-10">C2</button>
+                            <p>C</p>
+                            <div><button class="btn btn-active btn-ghost px-10">C1</button></div>
+                            <div><button class="btn btn-active btn-ghost px-10">C2</button></div>
                         </div>
                         <div class="flex gap-8 items-center">
-                            <button id="btn" class="btn btn-active btn-ghost px-10">C3</button>
-                            <button class="btn btn-active btn-ghost px-10">C4</button>
+                            <div><button class="btn btn-active btn-ghost px-10">C3</button></div>
+                            <div><button class="btn btn-active btn-ghost px-10">C4</button></div>
                         </div>
                     </div>
+
                 </div>
             </div>
             <!-- booking confirmation -->
@@ -209,19 +211,20 @@
                         <p>seat<span id="booked-tickets"
                                 class="text-white font-bold p-1 bg-green-400 rounded-3xl">0</span></p>
                         <p>class</p>
-                        <p>prize</p>
+                        <p>price</p>
                     </div>
-                    <ul id="ticket-receipt">
+                    <div id="ticket-receipt">
 
-                    </ul>
+                    </div>
                     <div class="flex justify-between p-2 border-t-2 border-black my-4">
                         <P>Total price</P>
                         <p>BDT <span id="total-price">0</span></p>
                     </div>
-                    <div class="join">
-                        <input id="input-field" class="input input-bordered join-item w-50"
+                    <div id="coupon" class="join">
+                        <input id="coupon-code" class="input input-bordered join-item w-50"
                             placeholder="Have any coupon?">
-                        <button id="apply-btn" class="btn join-item rounded-md bg-lime-600">Apply</button>
+                        <button onclick="updateGrandTotal('apply-btn')" id="apply-btn"
+                            class="btn join-item rounded-md bg-lime-600">Apply</button>
                     </div>
                     <!-- <div class="flex justify-between p-2">
                         <P>Discount</P>
@@ -233,14 +236,30 @@
                     </div>
                 </div>
 
-                <button class="btn btn-active btn-accent w-full my-4">Next</button>
-                
+                <!-- modal -->
+                <!-- Open the modal using ID.showModal() method -->
+                <div class="my-4 w-full">
+                    <button class="btn w-full bg-[#1DD100]" onclick="my_modal_5.showModal()">Next</button>
+                <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                    <div class="modal-box">
+                        <h3 class="font-bold text-lg">Hello!</h3>
+                        <p class="py-4">Press ESC key or click the button below to close</p>
+                        <div class="modal-action">
+                            <form method="dialog">
+                                <!-- if there is a button in form, it will close the modal -->
+                                <button class="btn">Close</button>
+                            </form>
+                        </div>
+                    </div>
+                </dialog>
+                </div>
         </section>
     </main>
     <footer>
 
     </footer>
     <script src="ticket.js"></script>
+    <script src="recap.js"></script>
 </body>
 
 </html>

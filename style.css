@@ -1,4 +1,4 @@
-li{
+.selected-tickets{
     display: flex;
     justify-content: space-between;
 }
